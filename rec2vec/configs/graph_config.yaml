@@ -1,0 +1,66 @@
+data:
+  folder: ./data/
+  separator: ;
+  encoding: utf-8
+  output_folder: ./output/
+  objects:
+    node_dict: node_dict.obj
+    final_graph: graph.obj
+
+nodes:
+  movies:
+    source: movies.csv
+    column: id
+    id_prefix: m
+    extended:
+      by: ratings
+      range: 0-5
+  directors:
+    source: movie_directors.csv
+    column: directorID
+  actors:
+    source: movie_actors.csv
+    column: actorID
+  genres:
+    source: movie_genres.csv
+    column: genre
+  users:
+    source: train_user_ratings.csv
+    column: userID
+    id_prefix: u
+
+edges:
+  movies_actors:
+    source: movie_actors.csv
+    vertex1:
+      column: movieID
+      type: movies
+    vertex2:
+      column: actorID
+      type: actors
+  movies_directors:
+    source: movie_directors.csv
+    vertex1:
+      column: movieID
+      type: movies
+    vertex2:
+      column: directorID
+      type: directors
+  movies_genres:
+    source: movie_genres.csv
+    vertex1:
+      column: movieID
+      type: movies
+    vertex2:
+      column: genre
+      type: genres
+  users_ratings:
+    source: train_user_ratings.csv
+    vertex1:
+      column: userID
+      type: users
+    vertex2:
+      column: movieID
+      type: ratings
+      extend_with: rating
+      extending: movies
