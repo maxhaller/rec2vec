@@ -1,7 +1,6 @@
 data:
   folder: ./data/
   separator: ;
-  encoding: utf-8
   output_folder: ./output/
   objects:
     node_dict: node_dict.obj

@@ -67,7 +67,7 @@ def main():
     parser.add_argument('-s', '--seed', default=0, type=int, help='Random seed for reproducibility')
     parser.add_argument('-ws', '--window-size', default=5, type=int, help='Window size for skipgram')
     parser.add_argument('-wo', '--workers', default=8, type=int, help='Number of workers')
-    parser.add_argument('-sp', '--save-path', default='./models/word2vec.obj', type=str, help='Path where trained model shall be stored')
+    parser.add_argument('-sp', '--save-path', default='./models/rec2vec.obj', type=str, help='Path where trained model shall be stored')
     parser.add_argument('-cp', '--config-path', default='./rec2vec/configs/graph_config.yaml', type=str, help='Path to custom config')
     parser.add_argument('-a', '--alpha', default=0, type=float, help='Chance for path to be reset to start')
     args = parser.parse_args()

@@ -1,5 +1,6 @@
 .idea
 *.obj
 output/*.csv
+output/*.txt
 __pycache__
 *.egg-info

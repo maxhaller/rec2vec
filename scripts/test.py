@@ -97,7 +97,7 @@ def predict_and_test(data_path: str, predictor_variable: str, target_variable: s
 def main() -> None:
     parser = argparse.ArgumentParser(description='Predict data')
     parser.add_argument('-dp', '--data-path', default='./data/test_user_ratings.csv', type=str, help='Path to test data')
-    parser.add_argument('-mp', '--model-path', default='./models/word2vec.obj', type=str, help='Path to rec2vec model')
+    parser.add_argument('-mp', '--model-path', default='./models/rec2vec.obj', type=str, help='Path to rec2vec model')
     parser.add_argument('-ndp', '--node-dict-path', default='./output/node_dict.obj', type=str, help='Path to nodedict')
     parser.add_argument('-rp', '--report-path', default='./output/report.txt', type=str, help='Path to report')
     parser.add_argument('-t', '--target-variable', default='ratings:rating', type=str, help='Link to be predicted')

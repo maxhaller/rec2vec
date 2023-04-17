@@ -29,7 +29,7 @@ acc = 0
 mse = float('inf')
 
 best_config = []
-with open('./output/hyperreport.csv', 'w') as f:
+with open('./output/hyperparameter_tuning_report.csv', 'w') as f:
     for paths in number_paths:
         for lengths in length_path:
             for alphas in alpha:
