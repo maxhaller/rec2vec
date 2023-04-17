@@ -1,4 +1,4 @@
-# Rec2Vec using DeepWalk
+# rec2vec using DeepWalk
 
 This project implements DeepWalk to predict ratings in a graph-based recommender system. It reads the 
 graph properties from a configuration file so that it can handle various datasets.
@@ -68,7 +68,14 @@ arguments. Relevant for the performance are:
 
 ### Benchmark
 
-Todo: add best results for hyperparameter tuning.
+- `--number-paths = 10`
+- `--length-path = 5`
+- `--seed = 0`
+- `--alpha = 0`
+
+Accuracy: ``25.2%``
+
+Mean Squared Error: ``2.85``
 
 ----
 

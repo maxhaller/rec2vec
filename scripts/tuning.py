@@ -15,9 +15,9 @@ df = pd.read_csv(filepath_or_buffer=data_path,
                  encoding=get_encoding(file=data_path))
 
 
-number_paths = [2, 3]
-length_path = [3, 4, 5]
-alpha = [0.1, 0.2, 0.3]
+number_paths = [5, 10]
+length_path = [5]
+alpha = [0]
 window_size = [5]
 
 g = Graph(config_path)
@@ -41,6 +41,6 @@ with open('./output/hyperparameter_tuning_report.csv', 'w') as f:
                     if mse > float(res_mse):
                         best_config = [paths, lengths, alphas, windows, res_acc, res_cm, res_mse]
                     mse = float(res_mse)
-                    f.write(f'{paths};{lengths};{alphas};{windows};{res_acc};{res_cm};{res_mse}\n')
+                    f.write(f'{paths};{lengths};{alphas};{windows};{res_acc};"{res_cm}";{res_mse}\n')
                     print(f'{[paths, lengths, alphas, windows, res_acc, res_cm, res_mse]}')
 
